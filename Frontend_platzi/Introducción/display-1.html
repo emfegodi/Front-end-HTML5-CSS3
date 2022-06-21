@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #block{
+            background: salmon;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+        }
+        a{
+            background: skyblue;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+        }
+        button{
+            background: slateblue;
+            width: 200px;
+            height: 200px;
+        }
+
+        .container{
+            display: flex;
+            background: papayawhip;
+            /* justify-content: space-between; */
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            flex-direction: column;
+        }
+        .item{
+            width: 30px;
+            height: 30px;
+            background: purple;
+        }
+
+        .container .item:nth-child(2n-1){
+            background: skyblue;
+        }
+
+        .container2{
+            margin-top: 20px;
+            display: grid;
+            background: papayawhip;
+            /* justify-content: space-between; */
+            height: 200px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+        .item2{
+            width: 30px;
+            height: 30px;
+            background: purple;
+        }
+
+        .container2 .item2:nth-child(2n-1){
+            background: skyblue;
+        }
+        .container2 .item2:nth-child(1){
+            grid-column: 1/2;
+        }
+        .container2 .item2:nth-child(2){
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        .container2 .item2:nth-child(3){
+            grid-column: 3/4;
+            grid-row: 3/4;
+        }
+        .container2 .item2:nth-child(4){
+            grid-column: 4/5;
+            grid-row: 4/5;
+        }
+    </style>
+</head>
+<body>
+    <div id="block">Bloque</div>
+    <a href="#">inline</a>
+    <button>inline block</button>
+
+    <!-- FLEXBOX -->
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <!-- CSSGRID -->
+    <div class="container2">
+        <div class="item2"></div>
+        <div class="item2"></div>
+        <div class="item2"></div>
+        <div class="item2"></div>
+    </div>
+</body>
+</html>
